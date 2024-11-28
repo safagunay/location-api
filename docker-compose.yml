@@ -1,0 +1,10 @@
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    env_file: ./.env
+    environment:
+      RABBITMQ_DEFAULT_USER: $RABBITMQ_USER
+      RABBITMQ_DEFAULT_PASS: $RABBITMQ_PASSWORD
+    ports:
+      - $RABBITMQ_AMQP_PORT:$RABBITMQ_AMQP_PORT
+      - $RABBITMQ_MANAGEMENT_PORT:$RABBITMQ_MANAGEMENT_PORT
