@@ -16,8 +16,6 @@ services:
     healthcheck:
       test: [ CMD, pg_isready, -d, $DB_DATABASE ]
       interval: 10s
-      timeout: 5s
-      retries: 10
 
   rabbitmq:
     image: rabbitmq:management
@@ -32,3 +30,20 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    healthcheck:
+      test: [ CMD, rabbitmq-diagnostics, -q, ping ]
+      interval: 5s
+
+  redis:
+    image: redis:alpine
+    command: --port $REDIS_PORT
+    restart: always
+    env_file: ./.env
+    ports:
+      - $REDIS_PORT:$REDIS_PORT
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: [ CMD, redis-cli, --raw, incr, ping ]
+      interval: 5s
