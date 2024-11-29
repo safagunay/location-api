@@ -2,9 +2,8 @@ import {
   Body,
   Controller,
   Get,
-  HttpException,
-  HttpStatus,
   Inject,
+  InternalServerErrorException,
   Post,
 } from '@nestjs/common';
 import {
@@ -39,9 +38,8 @@ export class AreaController {
     } catch (error) {
       await deleteArea(res.id, this.areaRepository);
       this.logger.error('Failed to update cache with error', error);
-      throw new HttpException(
+      throw new InternalServerErrorException(
         'Rejected because failed to write to cache',
-        HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
     return res;
