@@ -6,27 +6,23 @@ export class AreaEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Index()
   @Column({ type: 'varchar', length: 255 })
   name: string;
 
-  @Column({ type: 'numeric', nullable: false, precision: 9, scale: 6 })
+  @Column({ type: 'numeric', precision: 9, scale: 6 })
   northEastLat: number;
 
-  @Column({ type: 'numeric', nullable: false, precision: 9, scale: 6 })
+  @Column({ type: 'numeric', precision: 9, scale: 6 })
   northEastLng: number;
 
-  @Column({ type: 'numeric', nullable: false, precision: 9, scale: 6 })
+  @Column({ type: 'numeric', precision: 9, scale: 6 })
   southWestLat: number;
 
-  @Column({ type: 'numeric', nullable: false, precision: 9, scale: 6 })
+  @Column({ type: 'numeric', precision: 9, scale: 6 })
   southWestLng: number;
 
   @Column({ type: 'timestamp' })
   createdAt: Date;
-
-  @Column({ type: 'timestamp' })
-  updatedAt: Date;
 
   /**
    * Returns true if the given location is in the bounds of this area.
