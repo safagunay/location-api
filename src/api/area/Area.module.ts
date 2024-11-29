@@ -4,6 +4,6 @@ import { AreaController } from './Area.controller';
 
 @Module({
   imports: [TypeOrmModule, CacheModule, LoggerModule],
-  controllers: [AreaController]
+  controllers: [AreaController],
 })
 export class AreaModule {}

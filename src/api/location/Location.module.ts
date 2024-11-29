@@ -4,6 +4,6 @@ import { LocationController } from './Location.controller';
 
 @Module({
   imports: [QueueModule],
-  controllers: [LocationController]
+  controllers: [LocationController],
 })
 export class LocationModule {}

@@ -1,3 +1,3 @@
-import { AreaEntity } from "../../../core";
+import { AreaEntity } from '../../../core';
 
 export const entities = [AreaEntity];

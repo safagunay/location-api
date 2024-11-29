@@ -1,2 +1,2 @@
-export {QueueService} from './QueueService';
-export {QueueModule} from './Queue.module';
+export { QueueService } from './QueueService';
+export { QueueModule } from './Queue.module';

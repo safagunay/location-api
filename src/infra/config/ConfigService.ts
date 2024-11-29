@@ -26,7 +26,7 @@ export class ConfigService {
       AMQP_USER: str(),
       AMQP_PASSWORD: str(),
       AMQP_PORT: port(),
-      AMQP_QUEUE_NAME: str()
+      AMQP_QUEUE_NAME: str(),
     });
   }
 

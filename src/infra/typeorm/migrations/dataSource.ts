@@ -8,7 +8,7 @@ import { entities } from './entities';
 
 config();
 
-let connectionOptions: DataSourceOptions = {
+const connectionOptions: DataSourceOptions = {
   type: process.env.DB_TYPE as 'postgres',
   host: process.env.DB_HOST,
   port: process.env.DB_PORT ? +process.env.DB_PORT : 3306,
