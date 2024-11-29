@@ -1,12 +1,11 @@
 import { Module } from '@nestjs/common';
-import { HelloModule } from './hello/Hello.module';
 import { APP_FILTER } from '@nestjs/core';
 import { ZodExceptionFilter } from './common/ZodException.filter';
-import { AreaModule } from './area/Area.module';
 import { ConfigModule, LoggerModule } from 'src/infra';
+import { AreaModule } from './area/Area.module';
 
 @Module({
-  imports: [ConfigModule, LoggerModule, HelloModule, AreaModule],
+  imports: [ConfigModule, LoggerModule, AreaModule],
   providers: [
     {
       provide: APP_FILTER,
