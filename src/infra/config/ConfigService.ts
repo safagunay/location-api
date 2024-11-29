@@ -21,7 +21,12 @@ export class ConfigService {
       DB_USERNAME: str(),
       DB_PASSWORD: str(),
       REDIS_HOST: str(),
-      REDIS_PORT: port()
+      REDIS_PORT: port(),
+      AMQP_HOST: str(),
+      AMQP_USER: str(),
+      AMQP_PASSWORD: str(),
+      AMQP_PORT: port(),
+      AMQP_QUEUE_NAME: str()
     });
   }
 
@@ -67,5 +72,25 @@ export class ConfigService {
 
   public get REDIS_PORT() {
     return this._envConfig.REDIS_PORT;
+  }
+
+  public get AMQP_HOST() {
+    return this._envConfig.AMQP_HOST;
+  }
+
+  public get AMQP_PORT() {
+    return this._envConfig.AMQP_PORT;
+  }
+
+  public get AMQP_USER() {
+    return this._envConfig.AMQP_USER;
+  }
+
+  public get AMQP_PASSWORD() {
+    return this._envConfig.AMQP_PASSWORD;
+  }
+
+  public get AMQP_QUEUE_NAME() {
+    return this._envConfig.AMQP_QUEUE_NAME;
   }
 }

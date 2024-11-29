@@ -26,7 +26,7 @@ services:
       RABBITMQ_DEFAULT_PASS: $AMQP_PASSWORD
     ports:
       - $AMQP_PORT:$AMQP_PORT
-      - $AMQP_UI_PORT:$AMQP_UI_PORT
+      - 15672:15672
     depends_on:
       postgres:
         condition: service_healthy

@@ -10,4 +10,9 @@ export interface EnvConfig {
   DB_PASSWORD: string;
   REDIS_HOST: string;
   REDIS_PORT: number;
+  AMQP_HOST: string;
+  AMQP_USER: string;
+  AMQP_PASSWORD: string;
+  AMQP_PORT: number;
+  AMQP_QUEUE_NAME: string;
 }
