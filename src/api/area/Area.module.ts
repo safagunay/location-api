@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from 'src/infra';
+import { CacheModule, LoggerModule, TypeOrmModule } from 'src/infra';
 import { AreaController } from './area.controller';
 
 @Module({
-  imports: [TypeOrmModule],
+  imports: [TypeOrmModule, CacheModule, LoggerModule],
   controllers: [AreaController]
 })
 export class AreaModule {}

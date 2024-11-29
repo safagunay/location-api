@@ -10,7 +10,7 @@ services:
       PGPORT: $DB_PORT
       PGUSER: $DB_USERNAME
     volumes:
-      - /var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     ports:
       - $DB_PORT:$DB_PORT
     healthcheck:
@@ -47,3 +47,6 @@ services:
     healthcheck:
       test: [ CMD, redis-cli, --raw, incr, ping ]
       interval: 5s
+
+volumes:
+  postgres-data:

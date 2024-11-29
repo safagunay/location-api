@@ -5,16 +5,22 @@ import { createDataSource } from './createDataSource';
 import { AreaEntity } from 'src/core';
 import { AREA_REPOSITORY } from './constants';
 import { getRepository } from './getRepository';
+import { LoggerModule, LoggerService } from '../logger';
 
 @Module({
-  imports: [ConfigModule],
+  imports: [ConfigModule, LoggerModule],
   providers: [
     {
       provide: DataSource,
-      useFactory: async (configService: ConfigService) => {
-        return await createDataSource(configService);
+      useFactory: async (
+        configService: ConfigService,
+        logger: LoggerService,
+      ) => {
+        const dataSource = await createDataSource(configService);
+        logger.log('Data Source initialized', 'TypeOrmModule');
+        return dataSource;
       },
-      inject: [ConfigService],
+      inject: [ConfigService, LoggerService],
     },
     {
       provide: AREA_REPOSITORY,

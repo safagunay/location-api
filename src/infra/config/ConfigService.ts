@@ -20,6 +20,8 @@ export class ConfigService {
       DB_DATABASE: str(),
       DB_USERNAME: str(),
       DB_PASSWORD: str(),
+      REDIS_HOST: str(),
+      REDIS_PORT: port()
     });
   }
 
@@ -57,5 +59,13 @@ export class ConfigService {
 
   public get DB_PASSWORD() {
     return this._envConfig.DB_PASSWORD;
+  }
+
+  public get REDIS_HOST() {
+    return this._envConfig.REDIS_HOST;
+  }
+
+  public get REDIS_PORT() {
+    return this._envConfig.REDIS_PORT;
   }
 }
