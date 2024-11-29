@@ -1,6 +1,27 @@
 services:
+  postgres:
+    image: postgres
+    restart: always
+    env_file: ./.env
+    environment:
+      POSTGRES_USER: $DB_USERNAME
+      POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_DB: $DB_DATABASE
+      PGPORT: $DB_PORT
+      PGUSER: $DB_USERNAME
+    volumes:
+      - /var/lib/postgresql/data
+    ports:
+      - $DB_PORT:$DB_PORT
+    healthcheck:
+      test: [ CMD, pg_isready, -d, $DB_DATABASE ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
   rabbitmq:
     image: rabbitmq:management
+    restart: always
     env_file: ./.env
     environment:
       RABBITMQ_DEFAULT_USER: $AMQP_USER
@@ -8,3 +29,6 @@ services:
     ports:
       - $AMQP_PORT:$AMQP_PORT
       - $AMQP_UI_PORT:$AMQP_UI_PORT
+    depends_on:
+      postgres:
+        condition: service_healthy

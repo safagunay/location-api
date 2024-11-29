@@ -1,4 +1,4 @@
-import dotenv from 'dotenv';
+import { config } from 'dotenv';
 import { cleanEnv, host, port, str } from 'envalid';
 import { EnvConfig } from './EnvConfig.type';
 import { Injectable } from '@nestjs/common';
@@ -8,7 +8,7 @@ export class ConfigService {
   private _envConfig: EnvConfig;
 
   constructor() {
-    dotenv.config();
+    config();
 
     this._envConfig = cleanEnv(process.env, {
       NODE_ENV: str({ choices: ['development', 'production'] }),
@@ -36,7 +36,7 @@ export class ConfigService {
   }
 
   public get DB_TYPE() {
-    return this._envConfig.NODE_ENV;
+    return this._envConfig.DB_TYPE;
   }
 
   public get DB_HOST() {
