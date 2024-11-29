@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
 export const commonValidations = {
-  latitude: z.number().min(-90).max(90),
+  latitude: (message: string) => z.number({ message }).min(-90).max(90),
 
-  longitude: z.number().min(-180).max(180),
+  longitude: (message: string) => z.number({ message }).min(-180).max(180),
 
   positiveNumericId: z
     .string()

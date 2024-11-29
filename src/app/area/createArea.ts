@@ -5,10 +5,10 @@ import { commonValidations } from '../common/commonValidations';
 
 const createAreaSchema = z.object({
   name: z.string().trim().min(1).max(100),
-  northEastLat: commonValidations.latitude,
-  northEastLng: commonValidations.longitude,
-  southWestLat: commonValidations.latitude,
-  southWestLng: commonValidations.longitude,
+  northEastLat: commonValidations.latitude('northEastLat is required'),
+  northEastLng: commonValidations.longitude('northEastLng is required'),
+  southWestLat: commonValidations.latitude('southEastLat is required'),
+  southWestLng: commonValidations.longitude('southWestLng is required'),
 });
 
 export type CreateAreaParams = z.infer<typeof createAreaSchema>;

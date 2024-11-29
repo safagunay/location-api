@@ -1,11 +1,7 @@
-// - Modifies global `Reflect` object (or defines one in ES5 runtimes).
-import 'reflect-metadata';
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { migrations } from './migrations';
-import { AreaEntity } from '../../core';
+import { migrations } from './migrations/migrations';
 import { ConfigService } from '../config/ConfigService';
-
-const entities = [AreaEntity];
+import { entities } from './migrations/entities';
 
 export async function createDataSource(configService: ConfigService): Promise<DataSource> {
   let connectionOptions: DataSourceOptions = {
