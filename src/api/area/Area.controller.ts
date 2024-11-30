@@ -32,15 +32,18 @@ export class AreaController {
 
   @Post()
   async createArea(@Body() payload: CreateAreaParams): Promise<AreaEntity> {
+    // check cache service health before proceeding
+    await this.cacheService.getAreasLastUpdateTime();
+
     const res = await createArea(payload, this.areaRepository);
     try {
       await this.cacheService.setAreasLastUpdateTime(Date.now());
     } catch (error) {
       await deleteArea(res.id, this.areaRepository);
       this.logger.error('Failed to update cache with error', error);
-      throw new InternalServerErrorException(
-        'Rejected because failed to write to cache',
-      );
+      throw new InternalServerErrorException('failed to update cache', {
+        cause: error,
+      });
     }
     return res;
   }
