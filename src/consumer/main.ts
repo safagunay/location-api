@@ -26,8 +26,9 @@ async function startConsume(
   let nackedCount = 0;
   let createdLogCount = 0;
 
-  let areasLastUpdateTime = await cacheService.getAreasLastUpdateTime();
   let areas = await getAreas(areaRepository);
+  let areasLastUpdateTime = await cacheService.getAreasLastUpdateTime();
+  let reloadingAreas = false;
 
   queueService.consumeLocationQueue(
     `pid:${pid}`,
@@ -36,9 +37,15 @@ async function startConsume(
         const location = JSON.parse(message.content.toString()) as Location;
         const latestAreasLastUpdateTime =
           await cacheService.getAreasLastUpdateTime();
-        if (latestAreasLastUpdateTime !== areasLastUpdateTime) {
+        if (
+          latestAreasLastUpdateTime !== areasLastUpdateTime &&
+          !reloadingAreas
+        ) {
+          reloadingAreas = true;
           areas = await getAreas(areaRepository);
           areasLastUpdateTime = latestAreasLastUpdateTime;
+          loggerService.log('Reloaded areas from db', LOG_CONTEXT);
+          reloadingAreas = false;
         }
         const res = await logLocationAreaOverlaps(
           areas,
