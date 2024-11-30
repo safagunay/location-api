@@ -1,1 +1,1 @@
-export { type Location } from './Location.type';
+export { type LocationDto } from './LocationDto.type';

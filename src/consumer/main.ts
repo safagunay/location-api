@@ -8,7 +8,7 @@ import {
 } from 'src/infra';
 import { ConsumerModule } from './Consumer.module';
 import { Repository } from 'typeorm';
-import { AreaEntity, Location, LogEntity } from 'src/core';
+import { AreaEntity, LocationDto, LogEntity } from 'src/core';
 import { getAreas } from 'src/app/area';
 import { pid } from 'node:process';
 import { logLocationAreaOverlaps } from 'src/app/log/logLocationAreaOverlaps';
@@ -34,7 +34,7 @@ async function startConsume(
     `pid:${pid}`,
     async (message, ack, nack) => {
       try {
-        const location = JSON.parse(message.content.toString()) as Location;
+        const location = JSON.parse(message.content.toString()) as LocationDto;
         const latestAreasLastUpdateTime =
           await cacheService.getAreasLastUpdateTime();
         if (

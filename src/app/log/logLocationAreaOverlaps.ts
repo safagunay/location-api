@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm';
 import { z } from 'zod';
-import { AreaEntity, Location, LogEntity } from 'src/core';
+import { AreaEntity, LocationDto, LogEntity } from 'src/core';
 import { commonValidations } from '../common/commonValidations';
 
 const locationSchema = z.object({
@@ -18,10 +18,10 @@ const locationSchema = z.object({
 
 export async function logLocationAreaOverlaps(
   areas: AreaEntity[],
-  location: Location,
+  location: LocationDto,
   logRepository: Repository<LogEntity>,
 ): Promise<LogEntity[]> {
-  const parsedLocation = locationSchema.parse(location) as Location;
+  const parsedLocation = locationSchema.parse(location) as LocationDto;
 
   const res = await Promise.all(
     areas.map((area) => {

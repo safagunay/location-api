@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-import { Location } from '../location/Location.type';
+import { LocationDto } from '../location/LocationDto.type';
 import { LogEntity } from '../log/Log.entity';
 
 @Entity('areas')
@@ -31,7 +31,7 @@ export class AreaEntity {
   /**
    * Returns true if the given location is in the bounds of this area.
    */
-  contains(location: Location): boolean {
+  contains(location: LocationDto): boolean {
     const { latitude, longitude } = location;
 
     const isLatInRange =

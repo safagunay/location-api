@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as amqplib from 'amqplib';
-import { Location } from 'src/core';
+import { LocationDto } from 'src/core';
 import { ConfigService } from '../config';
 
 @Injectable()
@@ -12,7 +12,7 @@ export class QueueService {
     private readonly config: ConfigService,
   ) {}
 
-  async sendMessageToLocationQueue(location: Location) {
+  async sendMessageToLocationQueue(location: LocationDto) {
     if (!this._sendChannel) {
       this._sendChannel = await this.conn.createChannel();
     }
