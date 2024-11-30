@@ -37,6 +37,6 @@ import { LoggerModule, LoggerService } from '../logger';
       inject: [DataSource],
     },
   ],
-  exports: [DataSource, AREA_REPOSITORY],
+  exports: [DataSource, AREA_REPOSITORY, LOG_REPOSITORY],
 })
 export class TypeOrmModule {}
