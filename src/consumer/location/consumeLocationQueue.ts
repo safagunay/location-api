@@ -15,7 +15,6 @@ export async function consumeLocationQueue(
 ) {
   let ackedCount = 0;
   let nackedCount = 0;
-  let createdLogCount = 0;
 
   let areas = await getAreas(areaRepository);
   let areasLastUpdateTime = await cacheService.getAreasLastUpdateTime();
@@ -38,12 +37,7 @@ export async function consumeLocationQueue(
           loggerService.log('Reloaded areas from db', LOG_CONTEXT);
           reloadingAreas = false;
         }
-        const res = await logLocationAreaOverlaps(
-          areas,
-          location,
-          logRepository,
-        );
-        createdLogCount += res.length;
+        await logLocationAreaOverlaps(areas, location, logRepository);
 
         ack(message);
         ackedCount += 1;
@@ -57,7 +51,7 @@ export async function consumeLocationQueue(
 
   setInterval(() => {
     loggerService.log(
-      `acked: ${ackedCount}, nacked: ${nackedCount}, logs: ${createdLogCount}`,
+      `acked: ${ackedCount}, nacked: ${nackedCount}`,
       LOG_CONTEXT,
     );
   }, 10000);
