@@ -26,11 +26,12 @@ export async function logLocationAreaOverlaps(
   const res = await Promise.all(
     areas.map((area) => {
       if (area.contains(parsedLocation)) {
-        return logRepository.create({
+        const entity = logRepository.create({
           userId: parsedLocation.userId,
           areaId: area.id,
           timestamp: new Date(parsedLocation.timestamp),
         });
+        return logRepository.save(entity);
       } else {
         return Promise.resolve(null);
       }
