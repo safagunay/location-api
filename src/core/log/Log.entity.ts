@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryColumn, ManyToOne } from 'typeorm';
+import { Entity, PrimaryColumn, ManyToOne } from 'typeorm';
 import { AreaEntity } from '../area';
 
 @Entity('logs')
@@ -9,7 +9,7 @@ export class LogEntity {
   @PrimaryColumn({ type: 'timestamp' })
   timestamp: Date;
 
-  @Column({ type: 'integer' })
+  @PrimaryColumn({ type: 'integer' })
   areaId: number;
 
   @ManyToOne(() => AreaEntity, (area) => area.logs)
