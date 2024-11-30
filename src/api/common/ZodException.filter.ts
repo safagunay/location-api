@@ -17,7 +17,7 @@ export class ZodExceptionFilter implements ExceptionFilter {
 
     const ctx = host.switchToHttp();
 
-    const httpStatus =
+    let httpStatus =
       exception instanceof HttpException
         ? exception.getStatus()
         : HttpStatus.INTERNAL_SERVER_ERROR;
@@ -33,11 +33,12 @@ export class ZodExceptionFilter implements ExceptionFilter {
       const validationErrorMessage = `Invalid input: ${exception.errors
         .map((e) => e.message)
         .join(', ')}`;
+      httpStatus = HttpStatus.BAD_REQUEST;
 
-      responseBody.statusCode = HttpStatus.BAD_REQUEST;
       responseBody.message = validationErrorMessage;
     }
 
+    responseBody.statusCode = httpStatus;
     httpAdapter.reply(ctx.getResponse(), responseBody, httpStatus);
   }
 }
