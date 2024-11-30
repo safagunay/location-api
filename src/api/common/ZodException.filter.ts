@@ -27,15 +27,17 @@ export class ZodExceptionFilter implements ExceptionFilter {
       timestamp: new Date().toISOString(),
       statusCode: httpStatus,
       message: 'internal server error',
+      errors: [],
     };
 
     if (exception instanceof ZodError) {
-      const validationErrorMessage = `Invalid input: ${exception.errors
-        .map((e) => e.message)
-        .join(', ')}`;
+      const validationErrorMessages = exception.errors.map(
+        (e) => `${e.path}: ${e.message}`,
+      );
       httpStatus = HttpStatus.BAD_REQUEST;
 
-      responseBody.message = validationErrorMessage;
+      responseBody.message = 'invalid data';
+      responseBody.errors = validationErrorMessages;
     }
 
     responseBody.statusCode = httpStatus;
