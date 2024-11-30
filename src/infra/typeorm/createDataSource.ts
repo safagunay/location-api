@@ -14,7 +14,7 @@ export async function createDataSource(
     password: configService.DB_PASSWORD,
     database: configService.DB_DATABASE,
     synchronize: false,
-    logging: true,
+    logging: configService.NODE_ENV === 'development',
     entities,
     migrations,
   };

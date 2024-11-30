@@ -16,7 +16,7 @@ const connectionOptions: DataSourceOptions = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   synchronize: false,
-  logging: true,
+  logging: process.env.NODE_ENV === 'development',
   entities,
   migrations,
 };
