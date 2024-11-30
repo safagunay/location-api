@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 import { Location } from '../location/Location.type';
+import { LogEntity } from '../log/Log.entity';
 
 @Entity('areas')
 export class AreaEntity {
@@ -23,6 +24,9 @@ export class AreaEntity {
 
   @Column({ type: 'timestamp' })
   createdAt: Date;
+
+  @OneToMany(() => LogEntity, (log) => log.area)
+  logs: LogEntity[];
 
   /**
    * Returns true if the given location is in the bounds of this area.

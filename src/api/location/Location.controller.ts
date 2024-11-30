@@ -15,7 +15,7 @@ export class LocationController {
     }
     await Promise.all(
       payload.map((location) =>
-        this.queueService.sendLocationMessage(location),
+        this.queueService.sendMessageToLocationQueue(location),
       ),
     );
   }

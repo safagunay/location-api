@@ -9,6 +9,8 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "api": "pnpm run build && node dist/api/main",
     "api:debug": "pnpm run build && node dist/api/main --debug",
+    "consumer": "pnpm run build && node dist/consumer/main",
+    "consumer:debug": "pnpm run build && node dist/consumer/main --debug",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -17,8 +19,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm:generate": "typeorm-ts-node-commonjs migration:generate -d src/infra/typeorm/migrations/dataSource.ts",
     "typeorm:migrate": "typeorm-ts-node-commonjs migration:run -d src/infra/typeorm/migrations/dataSource.ts",
-    "typeorm:revert": "typeorm-ts-node-commonjs migration:revert -d src/infra/typeorm/dataSource.ts",
-    "typeorm:drop": "typeorm-ts-node-commonjs migration:drop -d src/infra/typeorm/dataSource.ts"
+    "typeorm:revert": "typeorm-ts-node-commonjs migration:revert -d src/infra/typeorm/migrations/dataSource.ts",
+    "typeorm:drop": "typeorm-ts-node-commonjs migration:drop -d src/infra/typeorm/migrations/dataSource.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.4.11",

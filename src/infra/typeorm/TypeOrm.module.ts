@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { DataSource } from 'typeorm';
 import { ConfigModule, ConfigService } from '../config';
 import { createDataSource } from './createDataSource';
-import { AreaEntity } from 'src/core';
-import { AREA_REPOSITORY } from './constants';
+import { AreaEntity, LogEntity } from 'src/core';
+import { AREA_REPOSITORY, LOG_REPOSITORY } from './constants';
 import { getRepository } from './getRepository';
 import { LoggerModule, LoggerService } from '../logger';
 
@@ -26,6 +26,13 @@ import { LoggerModule, LoggerService } from '../logger';
       provide: AREA_REPOSITORY,
       useFactory: async (dataSource: DataSource) => {
         return await getRepository(dataSource, AreaEntity);
+      },
+      inject: [DataSource],
+    },
+    {
+      provide: LOG_REPOSITORY,
+      useFactory: async (dataSource: DataSource) => {
+        return await getRepository(dataSource, LogEntity);
       },
       inject: [DataSource],
     },

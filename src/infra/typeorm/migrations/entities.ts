@@ -1,3 +1,3 @@
-import { AreaEntity } from '../../../core';
+import { AreaEntity, LogEntity } from '../../../core';
 
-export const entities = [AreaEntity];
+export const entities = [AreaEntity, LogEntity];
