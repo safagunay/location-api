@@ -1,27 +1,22 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   Get,
   Inject,
-  InternalServerErrorException,
   Post,
 } from '@nestjs/common';
-import {
-  createArea,
-  CreateAreaParams,
-  deleteArea,
-  getAreas,
-} from 'src/app/area';
+import { createArea, CreateAreaDto, getAreas } from 'src/app/area';
 import { AreaEntity } from 'src/core';
-import { AREA_REPOSITORY, CacheService, LoggerService } from 'src/infra';
-import { Repository } from 'typeorm';
+import { AREA_REPOSITORY, CacheService } from 'src/infra';
+import { DataSource, Repository } from 'typeorm';
 
 @Controller('/areas')
 export class AreaController {
   constructor(
     @Inject(AREA_REPOSITORY)
     private readonly areaRepository: Repository<AreaEntity>,
-    private readonly logger: LoggerService,
+    private readonly dataSource: DataSource,
     private readonly cacheService: CacheService,
   ) {}
 
@@ -31,20 +26,47 @@ export class AreaController {
   }
 
   @Post()
-  async createArea(@Body() payload: CreateAreaParams): Promise<AreaEntity> {
+  async createAreas(
+    @Body() payload: CreateAreaDto | CreateAreaDto[],
+  ): Promise<AreaEntity[]> {
     // check cache service health before proceeding
     await this.cacheService.getAreasLastUpdateTime();
 
-    const res = await createArea(payload, this.areaRepository);
-    try {
-      await this.cacheService.setAreasLastUpdateTime(Date.now());
-    } catch (error) {
-      await deleteArea(res.id, this.areaRepository);
-      this.logger.error('Failed to update cache with error', error);
-      throw new InternalServerErrorException('failed to update cache', {
-        cause: error,
-      });
+    let dtos: CreateAreaDto[];
+    if (Array.isArray(payload)) {
+      dtos = payload as CreateAreaDto[];
+
+      if (!payload.length || payload.length > 100) {
+        throw new BadRequestException(
+          'JSON array must be of min length 1 and max length 100',
+        );
+      }
+    } else {
+      dtos = [payload];
     }
-    return res;
+
+    const queryRunner = this.dataSource.createQueryRunner();
+    await queryRunner.connect();
+
+    await queryRunner.startTransaction();
+
+    try {
+      const areaRepository = queryRunner.manager.withRepository(
+        this.areaRepository,
+      );
+      const resArr = [];
+      for (const dto of dtos) {
+        resArr.push(await createArea(dto, areaRepository));
+      }
+      await this.cacheService.setAreasLastUpdateTime(Date.now());
+
+      await queryRunner.commitTransaction();
+      return resArr;
+    } catch (error) {
+      await queryRunner.rollbackTransaction();
+      throw error;
+    } finally {
+      await queryRunner.release();
+    }
   }
 }

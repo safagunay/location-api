@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { APP_FILTER } from '@nestjs/core';
-import { ZodExceptionFilter } from './common/ZodException.filter';
+import { CustomExceptionFilter } from './common/CustomException.filter';
 import { ConfigModule, LoggerModule } from 'src/infra';
 import { AreaModule } from './area/Area.module';
 import { LocationModule } from './location/Location.module';
@@ -11,7 +11,7 @@ import { LogModule } from './log/Log.module';
   providers: [
     {
       provide: APP_FILTER,
-      useClass: ZodExceptionFilter,
+      useClass: CustomExceptionFilter,
     },
   ],
 })

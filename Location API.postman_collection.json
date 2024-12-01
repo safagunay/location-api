@@ -1,0 +1,395 @@
+{
+    "info": {
+        "_postman_id": "7a0362de-0031-43ba-9669-c72a28c527d9",
+        "name": "Location API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "16828448"
+    },
+    "item": [
+        {
+            "name": "areas",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "localhost:3444/areas",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3444",
+                    "path": [
+                        "areas"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "logs",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "localhost:3444/logs",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3444",
+                    "path": [
+                        "logs"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "logs/user/:id",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "localhost:3444/logs/user/safa",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3444",
+                    "path": [
+                        "logs",
+                        "user",
+                        "safa"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "name": "user1 logs",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:3444/logs/user/user1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "logs",
+                                "user",
+                                "user1"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "user2 logs",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:3444/logs/user/user2",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "logs",
+                                "user",
+                                "user2"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "user3 logs",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:3444/logs/user/user3",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "logs",
+                                "user",
+                                "user3"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "user4 logs",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:3444/logs/user/user4",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "logs",
+                                "user",
+                                "user4"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                }
+            ]
+        },
+        {
+            "name": "areas",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:3444/areas",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3444",
+                    "path": [
+                        "areas"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "name": "Cities",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\r\n    {\r\n        \"name\": \"Istanbul\",\r\n        \"northEastLat\": 41.3201,\r\n        \"northEastLng\": 29.4317,\r\n        \"southWestLat\": 40.8021,\r\n        \"southWestLng\": 28.5244\r\n    },\r\n    {\r\n        \"name\": \"Rome\",\r\n        \"northEastLat\": 41.9541,\r\n        \"northEastLng\": 12.8224,\r\n        \"southWestLat\": 41.7967,\r\n        \"southWestLng\": 12.3389\r\n    },\r\n    {\r\n        \"name\": \"Berlin\",\r\n        \"northEastLat\": 52.6755,\r\n        \"northEastLng\": 13.7612,\r\n        \"southWestLat\": 52.3383,\r\n        \"southWestLng\": 13.0884\r\n    },\r\n    {\r\n        \"name\": \"Paris\",\r\n        \"northEastLat\": 48.9022,\r\n        \"northEastLng\": 2.4699,\r\n        \"southWestLat\": 48.8156,\r\n        \"southWestLng\": 2.2241\r\n    },\r\n    {\r\n        \"name\": \"Amsterdam\",\r\n        \"northEastLat\": 52.4312,\r\n        \"northEastLng\": 4.9631,\r\n        \"southWestLat\": 52.2782,\r\n        \"southWestLng\": 4.7281\r\n    },\r\n    {\r\n        \"name\": \"Lisbon\",\r\n        \"northEastLat\": 38.7747,\r\n        \"northEastLng\": -9.0926,\r\n        \"southWestLat\": 38.6913,\r\n        \"southWestLng\": -9.2295\r\n    },\r\n    {\r\n        \"name\": \"Madrid\",\r\n        \"northEastLat\": 40.6449,\r\n        \"northEastLng\": -3.5561,\r\n        \"southWestLat\": 40.3122,\r\n        \"southWestLng\": -3.8889\r\n    },\r\n    {\r\n        \"name\": \"Copenhagen\",\r\n        \"northEastLat\": 55.7328,\r\n        \"northEastLng\": 12.6551,\r\n        \"southWestLat\": 55.6134,\r\n        \"southWestLng\": 12.4533\r\n    },\r\n    {\r\n        \"name\": \"Athens\",\r\n        \"northEastLat\": 38.0524,\r\n        \"northEastLng\": 23.8615,\r\n        \"southWestLat\": 37.8833,\r\n        \"southWestLng\": 23.6348\r\n    },\r\n    {\r\n        \"name\": \"Dublin\",\r\n        \"northEastLat\": 53.4106,\r\n        \"northEastLng\": -6.0515,\r\n        \"southWestLat\": 53.3244,\r\n        \"southWestLng\": -6.3878\r\n    },\r\n    {\r\n        \"name\": \"Vienna\",\r\n        \"northEastLat\": 48.3269,\r\n        \"northEastLng\": 16.5738,\r\n        \"southWestLat\": 48.1356,\r\n        \"southWestLng\": 16.1926\r\n    },\r\n    {\r\n        \"name\": \"Stockholm\",\r\n        \"northEastLat\": 59.4033,\r\n        \"northEastLng\": 18.1538,\r\n        \"southWestLat\": 59.2735,\r\n        \"southWestLng\": 17.8625\r\n    }\r\n]",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:3444/areas",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "areas"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "Countries",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\r\n    {\r\n        \"name\": \"Germany\",\r\n        \"northEastLat\": 55.0815,\r\n        \"northEastLng\": 15.0419,\r\n        \"southWestLat\": 47.2701,\r\n        \"southWestLng\": 5.8663\r\n    },\r\n    {\r\n        \"name\": \"Turkey\",\r\n        \"northEastLat\": 42.1076,\r\n        \"northEastLng\": 44.8177,\r\n        \"southWestLat\": 35.8086,\r\n        \"southWestLng\": 25.6639\r\n    },\r\n    {\r\n        \"name\": \"Albania\",\r\n        \"northEastLat\": 42.6611,\r\n        \"northEastLng\": 21.0574,\r\n        \"southWestLat\": 39.6448,\r\n        \"southWestLng\": 19.2631\r\n    },\r\n    {\r\n        \"name\": \"Andorra\",\r\n        \"northEastLat\": 42.6560,\r\n        \"northEastLng\": 1.7865,\r\n        \"southWestLat\": 42.4285,\r\n        \"southWestLng\": 1.4072\r\n    },\r\n    {\r\n        \"name\": \"Austria\",\r\n        \"northEastLat\": 49.0210,\r\n        \"northEastLng\": 17.1621,\r\n        \"southWestLat\": 46.3723,\r\n        \"southWestLng\": 9.5308\r\n    },\r\n    {\r\n        \"name\": \"Belarus\",\r\n        \"northEastLat\": 56.1670,\r\n        \"northEastLng\": 32.7731,\r\n        \"southWestLat\": 51.2620,\r\n        \"southWestLng\": 23.1783\r\n    },\r\n    {\r\n        \"name\": \"Belgium\",\r\n        \"northEastLat\": 51.5054,\r\n        \"northEastLng\": 6.4072,\r\n        \"southWestLat\": 49.4970,\r\n        \"southWestLng\": 2.5430\r\n    },\r\n    {\r\n        \"name\": \"Bosnia and Herzegovina\",\r\n        \"northEastLat\": 45.2766,\r\n        \"northEastLng\": 19.6237,\r\n        \"southWestLat\": 42.5560,\r\n        \"southWestLng\": 15.7229\r\n    },\r\n    {\r\n        \"name\": \"Bulgaria\",\r\n        \"northEastLat\": 44.2152,\r\n        \"northEastLng\": 28.6122,\r\n        \"southWestLat\": 41.2357,\r\n        \"southWestLng\": 22.3572\r\n    },\r\n    {\r\n        \"name\": \"Croatia\",\r\n        \"northEastLat\": 46.5387,\r\n        \"northEastLng\": 19.4273,\r\n        \"southWestLat\": 42.4192,\r\n        \"southWestLng\": 13.4926\r\n    },\r\n    {\r\n        \"name\": \"Cyprus\",\r\n        \"northEastLat\": 35.7079,\r\n        \"northEastLng\": 34.5970,\r\n        \"southWestLat\": 34.6308,\r\n        \"southWestLng\": 32.2722\r\n    },\r\n    {\r\n        \"name\": \"Czechia\",\r\n        \"northEastLat\": 51.0558,\r\n        \"northEastLng\": 18.8584,\r\n        \"southWestLat\": 48.5518,\r\n        \"southWestLng\": 12.0907\r\n    },\r\n    {\r\n        \"name\": \"Denmark\",\r\n        \"northEastLat\": 57.7484,\r\n        \"northEastLng\": 15.2032,\r\n        \"southWestLat\": 54.5624,\r\n        \"southWestLng\": 8.0762\r\n    },\r\n    {\r\n        \"name\": \"Estonia\",\r\n        \"northEastLat\": 59.6762,\r\n        \"northEastLng\": 28.1860,\r\n        \"southWestLat\": 57.5093,\r\n        \"southWestLng\": 21.8333\r\n    },\r\n    {\r\n        \"name\": \"Finland\",\r\n        \"northEastLat\": 70.0923,\r\n        \"northEastLng\": 31.5867,\r\n        \"southWestLat\": 59.8088,\r\n        \"southWestLng\": 19.0835\r\n    },\r\n    {\r\n        \"name\": \"France\",\r\n        \"northEastLat\": 51.1242,\r\n        \"northEastLng\": 9.5600,\r\n        \"southWestLat\": 41.3143,\r\n        \"southWestLng\": -5.1422\r\n    },\r\n    {\r\n        \"name\": \"Greece\",\r\n        \"northEastLat\": 41.7489,\r\n        \"northEastLng\": 26.6056,\r\n        \"southWestLat\": 34.8086,\r\n        \"southWestLng\": 19.3736\r\n    },\r\n    {\r\n        \"name\": \"Hungary\",\r\n        \"northEastLat\": 48.5852,\r\n        \"northEastLng\": 22.8977,\r\n        \"southWestLat\": 45.7409,\r\n        \"southWestLng\": 16.1119\r\n    },\r\n    {\r\n        \"name\": \"Iceland\",\r\n        \"northEastLat\": 66.5430,\r\n        \"northEastLng\": -13.4951,\r\n        \"southWestLat\": 63.3926,\r\n        \"southWestLng\": -24.5321\r\n    },\r\n    {\r\n        \"name\": \"Ireland\",\r\n        \"northEastLat\": 55.3820,\r\n        \"northEastLng\": -5.9960,\r\n        \"southWestLat\": 51.3850,\r\n        \"southWestLng\": -10.4800\r\n    },\r\n    {\r\n        \"name\": \"Italy\",\r\n        \"northEastLat\": 47.0921,\r\n        \"northEastLng\": 18.5135,\r\n        \"southWestLat\": 35.4897,\r\n        \"southWestLng\": 6.6267\r\n    },\r\n    {\r\n        \"name\": \"Latvia\",\r\n        \"northEastLat\": 58.0845,\r\n        \"northEastLng\": 28.2336,\r\n        \"southWestLat\": 55.6669,\r\n        \"southWestLng\": 20.9680\r\n    },\r\n    {\r\n        \"name\": \"Lithuania\",\r\n        \"northEastLat\": 56.4500,\r\n        \"northEastLng\": 26.7954,\r\n        \"southWestLat\": 53.9045,\r\n        \"southWestLng\": 20.9486\r\n    },\r\n    {\r\n        \"name\": \"Luxembourg\",\r\n        \"northEastLat\": 50.1821,\r\n        \"northEastLng\": 6.5309,\r\n        \"southWestLat\": 49.4478,\r\n        \"southWestLng\": 5.7356\r\n    },\r\n    {\r\n        \"name\": \"Malta\",\r\n        \"northEastLat\": 36.0831,\r\n        \"northEastLng\": 14.5676,\r\n        \"southWestLat\": 35.7991,\r\n        \"southWestLng\": 14.1804\r\n    },\r\n    {\r\n        \"name\": \"Monaco\",\r\n        \"northEastLat\": 43.7510,\r\n        \"northEastLng\": 7.4393,\r\n        \"southWestLat\": 43.7247,\r\n        \"southWestLng\": 7.4084\r\n    },\r\n    {\r\n        \"name\": \"Montenegro\",\r\n        \"northEastLat\": 43.5588,\r\n        \"northEastLng\": 20.3453,\r\n        \"southWestLat\": 41.8524,\r\n        \"southWestLng\": 18.4334\r\n    },\r\n    {\r\n        \"name\": \"Netherlands\",\r\n        \"northEastLat\": 53.6316,\r\n        \"northEastLng\": 7.2275,\r\n        \"southWestLat\": 50.7503,\r\n        \"southWestLng\": 3.3574\r\n    },\r\n    {\r\n        \"name\": \"North Macedonia\",\r\n        \"northEastLat\": 42.3619,\r\n        \"northEastLng\": 23.0341,\r\n        \"southWestLat\": 40.8602,\r\n        \"southWestLng\": 20.4632\r\n    },\r\n    {\r\n        \"name\": \"Norway\",\r\n        \"northEastLat\": 71.1840,\r\n        \"northEastLng\": 31.0281,\r\n        \"southWestLat\": 57.9937,\r\n        \"southWestLng\": 4.6366\r\n    },\r\n    {\r\n        \"name\": \"Poland\",\r\n        \"northEastLat\": 54.8358,\r\n        \"northEastLng\": 24.1459,\r\n        \"southWestLat\": 49.0020,\r\n        \"southWestLng\": 14.1229\r\n    },\r\n    {\r\n        \"name\": \"Portugal\",\r\n        \"northEastLat\": 42.1521,\r\n        \"northEastLng\": -6.1899,\r\n        \"southWestLat\": 36.9613,\r\n        \"southWestLng\": -9.5266\r\n    },\r\n    {\r\n        \"name\": \"Romania\",\r\n        \"northEastLat\": 48.2666,\r\n        \"northEastLng\": 29.7260,\r\n        \"southWestLat\": 43.6187,\r\n        \"southWestLng\": 20.2610\r\n    },\r\n    {\r\n        \"name\": \"San Marino\",\r\n        \"northEastLat\": 43.9925,\r\n        \"northEastLng\": 12.5158,\r\n        \"southWestLat\": 43.8937,\r\n        \"southWestLng\": 12.4033\r\n    },\r\n    {\r\n        \"name\": \"Serbia\",\r\n        \"northEastLat\": 46.1901,\r\n        \"northEastLng\": 23.0065,\r\n        \"southWestLat\": 41.8652,\r\n        \"southWestLng\": 18.8200\r\n    },\r\n    {\r\n        \"name\": \"Slovakia\",\r\n        \"northEastLat\": 49.6130,\r\n        \"northEastLng\": 22.5690,\r\n        \"southWestLat\": 47.7325,\r\n        \"southWestLng\": 16.8422\r\n    },\r\n    {\r\n        \"name\": \"Slovenia\",\r\n        \"northEastLat\": 46.8760,\r\n        \"northEastLng\": 16.6068,\r\n        \"southWestLat\": 45.4210,\r\n        \"southWestLng\": 13.3754\r\n    },\r\n    {\r\n        \"name\": \"Spain\",\r\n        \"northEastLat\": 43.7934,\r\n        \"northEastLng\": 4.3262,\r\n        \"southWestLat\": 36.0000,\r\n        \"southWestLng\": -9.3000\r\n    },\r\n    {\r\n        \"name\": \"Sweden\",\r\n        \"northEastLat\": 69.0597,\r\n        \"northEastLng\": 24.1553,\r\n        \"southWestLat\": 55.3363,\r\n        \"southWestLng\": 10.9819\r\n    },\r\n    {\r\n        \"name\": \"Switzerland\",\r\n        \"northEastLat\": 47.8054,\r\n        \"northEastLng\": 10.4836,\r\n        \"southWestLat\": 45.8179,\r\n        \"southWestLng\": 5.9561\r\n    },\r\n    {\r\n        \"name\": \"United Kingdom\",\r\n        \"northEastLat\": 60.8479,\r\n        \"northEastLng\": 1.7689,\r\n        \"southWestLat\": 49.9554,\r\n        \"southWestLng\": -8.6494\r\n    },\r\n    {\r\n        \"name\": \"Vatican City\",\r\n        \"northEastLat\": 41.9079,\r\n        \"northEastLng\": 12.4584,\r\n        \"southWestLat\": 41.9029,\r\n        \"southWestLng\": 12.4457\r\n    }\r\n]",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:3444/areas",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "areas"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                }
+            ]
+        },
+        {
+            "name": "locations",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "[]",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:3444/locations",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3444",
+                    "path": [
+                        "locations"
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "name": "user1 locations",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 49.031021,\r\n        \"longitude\": 37.058108,\r\n        \"timestamp\": 1709132560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 35.875793,\r\n        \"longitude\": 20.274529,\r\n        \"timestamp\": 1716303760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 68.699241,\r\n        \"longitude\": 29.650236,\r\n        \"timestamp\": 1725375760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 39.052149,\r\n        \"longitude\": 29.612889,\r\n        \"timestamp\": 1714662160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 67.703963,\r\n        \"longitude\": 9.52884,\r\n        \"timestamp\": 1710169360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 51.455754,\r\n        \"longitude\": 46.155183,\r\n        \"timestamp\": 1723734160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.187588,\r\n        \"longitude\": 47.800079,\r\n        \"timestamp\": 1719414160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 60.158972,\r\n        \"longitude\": 7.040589,\r\n        \"timestamp\": 1714748560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 45.12796,\r\n        \"longitude\": 35.046737,\r\n        \"timestamp\": 1713193360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 37.938753,\r\n        \"longitude\": 22.001628,\r\n        \"timestamp\": 1723993360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 44.891346,\r\n        \"longitude\": 39.183993,\r\n        \"timestamp\": 1719932560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 63.287332,\r\n        \"longitude\": 23.735752,\r\n        \"timestamp\": 1723474960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 41.841819,\r\n        \"longitude\": 5.041362,\r\n        \"timestamp\": 1728486160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 62.810573,\r\n        \"longitude\": 9.308152,\r\n        \"timestamp\": 1729695760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 68.496904,\r\n        \"longitude\": 37.534295,\r\n        \"timestamp\": 1705158160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 53.883511,\r\n        \"longitude\": 0.529987,\r\n        \"timestamp\": 1713538960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 35.118456,\r\n        \"longitude\": 23.164147,\r\n        \"timestamp\": 1722956560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 59.453604,\r\n        \"longitude\": 24.604994,\r\n        \"timestamp\": 1704034960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 48.033374,\r\n        \"longitude\": 11.989758,\r\n        \"timestamp\": 1715094160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 57.643588,\r\n        \"longitude\": -3.257624,\r\n        \"timestamp\": 1716649360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 65.354152,\r\n        \"longitude\": 22.107014,\r\n        \"timestamp\": 1722524560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 47.961271,\r\n        \"longitude\": 31.420921,\r\n        \"timestamp\": 1716822160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 56.967899,\r\n        \"longitude\": -6.325995,\r\n        \"timestamp\": 1717945360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 50.68446,\r\n        \"longitude\": 13.909462,\r\n        \"timestamp\": 1706194960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.703565,\r\n        \"longitude\": 42.067253,\r\n        \"timestamp\": 1705503760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 48.67452,\r\n        \"longitude\": -1.745226,\r\n        \"timestamp\": 1704207760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 60.983262,\r\n        \"longitude\": 10.350943,\r\n        \"timestamp\": 1720105360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 65.722081,\r\n        \"longitude\": 6.840121,\r\n        \"timestamp\": 1726153360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 68.842405,\r\n        \"longitude\": 9.556075,\r\n        \"timestamp\": 1714834960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 48.854644,\r\n        \"longitude\": 33.654856,\r\n        \"timestamp\": 1709478160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 67.111444,\r\n        \"longitude\": 0.466395,\r\n        \"timestamp\": 1714834960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 35.591805,\r\n        \"longitude\": 13.236499,\r\n        \"timestamp\": 1718463760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 56.765737,\r\n        \"longitude\": -0.098994,\r\n        \"timestamp\": 1702134160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 61.153386,\r\n        \"longitude\": 31.885093,\r\n        \"timestamp\": 1701702160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 65.625643,\r\n        \"longitude\": 27.607999,\r\n        \"timestamp\": 1719932560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 38.152263,\r\n        \"longitude\": 31.293424,\r\n        \"timestamp\": 1715180560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 38.998711,\r\n        \"longitude\": 46.935433,\r\n        \"timestamp\": 1719932560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 43.381007,\r\n        \"longitude\": 42.0327,\r\n        \"timestamp\": 1719154960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 65.388366,\r\n        \"longitude\": -6.948051,\r\n        \"timestamp\": 1725289360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.117807,\r\n        \"longitude\": -5.30149,\r\n        \"timestamp\": 1728140560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 58.365915,\r\n        \"longitude\": 45.910624,\r\n        \"timestamp\": 1722524560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 62.95235,\r\n        \"longitude\": -4.225645,\r\n        \"timestamp\": 1728399760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 61.948915,\r\n        \"longitude\": 3.071364,\r\n        \"timestamp\": 1727535760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.958134,\r\n        \"longitude\": -0.701629,\r\n        \"timestamp\": 1717772560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 40.086972,\r\n        \"longitude\": 18.395334,\r\n        \"timestamp\": 1729782160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 54.055324,\r\n        \"longitude\": 49.860604,\r\n        \"timestamp\": 1702566160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 39.961855,\r\n        \"longitude\": 37.871725,\r\n        \"timestamp\": 1711206160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 59.344608,\r\n        \"longitude\": 42.538134,\r\n        \"timestamp\": 1717081360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 62.822824,\r\n        \"longitude\": -1.820691,\r\n        \"timestamp\": 1703343760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 67.028517,\r\n        \"longitude\": 15.40185,\r\n        \"timestamp\": 1703257360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 57.545964,\r\n        \"longitude\": 2.722174,\r\n        \"timestamp\": 1703516560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 61.181492,\r\n        \"longitude\": 23.895865,\r\n        \"timestamp\": 1711206160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 68.336777,\r\n        \"longitude\": 33.144495,\r\n        \"timestamp\": 1702998160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 59.587355,\r\n        \"longitude\": 40.453678,\r\n        \"timestamp\": 1713538960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 63.821963,\r\n        \"longitude\": 6.883457,\r\n        \"timestamp\": 1723820560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 48.762072,\r\n        \"longitude\": 26.128435,\r\n        \"timestamp\": 1703862160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 61.782409,\r\n        \"longitude\": -0.434606,\r\n        \"timestamp\": 1730300560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 42.839922,\r\n        \"longitude\": 21.858662,\r\n        \"timestamp\": 1709823760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 54.979229,\r\n        \"longitude\": 2.126574,\r\n        \"timestamp\": 1717513360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 45.894034,\r\n        \"longitude\": 30.905798,\r\n        \"timestamp\": 1730214160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 39.788105,\r\n        \"longitude\": 13.90937,\r\n        \"timestamp\": 1732546960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 58.400823,\r\n        \"longitude\": 40.003306,\r\n        \"timestamp\": 1716994960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 56.030932,\r\n        \"longitude\": 9.247065,\r\n        \"timestamp\": 1721574160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 52.901657,\r\n        \"longitude\": 23.633989,\r\n        \"timestamp\": 1705849360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 57.905362,\r\n        \"longitude\": -1.700247,\r\n        \"timestamp\": 1708354960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 57.733289,\r\n        \"longitude\": 31.896595,\r\n        \"timestamp\": 1727881360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.528829,\r\n        \"longitude\": 38.204861,\r\n        \"timestamp\": 1726844560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 51.471046,\r\n        \"longitude\": -7.249754,\r\n        \"timestamp\": 1719241360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 56.195404,\r\n        \"longitude\": -9.808714,\r\n        \"timestamp\": 1712156560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 63.724475,\r\n        \"longitude\": 16.582765,\r\n        \"timestamp\": 1723302160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 65.728001,\r\n        \"longitude\": 1.948458,\r\n        \"timestamp\": 1706194960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 55.121369,\r\n        \"longitude\": -3.379264,\r\n        \"timestamp\": 1707145360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.085489,\r\n        \"longitude\": -4.8053,\r\n        \"timestamp\": 1701788560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 62.870451,\r\n        \"longitude\": 30.919906,\r\n        \"timestamp\": 1708700560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 54.590947,\r\n        \"longitude\": -5.678265,\r\n        \"timestamp\": 1726930960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 41.36523,\r\n        \"longitude\": 30.282465,\r\n        \"timestamp\": 1718809360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 52.706651,\r\n        \"longitude\": 47.012233,\r\n        \"timestamp\": 1714834960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 49.739682,\r\n        \"longitude\": 5.534856,\r\n        \"timestamp\": 1727017360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 51.730975,\r\n        \"longitude\": 17.095945,\r\n        \"timestamp\": 1728226960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 61.858195,\r\n        \"longitude\": 4.38355,\r\n        \"timestamp\": 1704121360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 42.135446,\r\n        \"longitude\": -2.917581,\r\n        \"timestamp\": 1717340560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 68.508655,\r\n        \"longitude\": 29.591484,\r\n        \"timestamp\": 1725548560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 64.464824,\r\n        \"longitude\": -3.737583,\r\n        \"timestamp\": 1701874960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 56.423674,\r\n        \"longitude\": -8.54644,\r\n        \"timestamp\": 1728486160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 67.8697,\r\n        \"longitude\": 6.312673,\r\n        \"timestamp\": 1705503760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 40.670015,\r\n        \"longitude\": 41.389773,\r\n        \"timestamp\": 1704207760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 41.644026,\r\n        \"longitude\": 0.720572,\r\n        \"timestamp\": 1713538960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 36.41835,\r\n        \"longitude\": 28.474373,\r\n        \"timestamp\": 1721574160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 44.377277,\r\n        \"longitude\": -4.933381,\r\n        \"timestamp\": 1718204560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 64.629347,\r\n        \"longitude\": 19.819967,\r\n        \"timestamp\": 1709910160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 64.207705,\r\n        \"longitude\": 42.425056,\r\n        \"timestamp\": 1714230160\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 38.908511,\r\n        \"longitude\": 24.407588,\r\n        \"timestamp\": 1721487760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 57.611821,\r\n        \"longitude\": 45.453632,\r\n        \"timestamp\": 1729436560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 56.422707,\r\n        \"longitude\": 0.295496,\r\n        \"timestamp\": 1729868560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 50.623662,\r\n        \"longitude\": 46.032912,\r\n        \"timestamp\": 1723993360\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 44.948772,\r\n        \"longitude\": 20.606824,\r\n        \"timestamp\": 1720882960\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 47.514607,\r\n        \"longitude\": -3.861717,\r\n        \"timestamp\": 1704812560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 68.721972,\r\n        \"longitude\": -3.184904,\r\n        \"timestamp\": 1714143760\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 67.775441,\r\n        \"longitude\": -2.400147,\r\n        \"timestamp\": 1703084560\r\n    },\r\n    {\r\n        \"userId\": \"user1\",\r\n        \"latitude\": 46.97206,\r\n        \"longitude\": 12.185661,\r\n        \"timestamp\": 1720537360\r\n    }\r\n]",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:3444/locations",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "locations"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "user2 locations",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 52.518107,\r\n        \"longitude\": -5.827545,\r\n        \"timestamp\": 1726671825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 54.638116,\r\n        \"longitude\": 29.059562,\r\n        \"timestamp\": 1726153425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 66.761435,\r\n        \"longitude\": 3.60446,\r\n        \"timestamp\": 1702652625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.598584,\r\n        \"longitude\": -9.7006,\r\n        \"timestamp\": 1721142225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 53.37083,\r\n        \"longitude\": 31.634136,\r\n        \"timestamp\": 1705849425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.932308,\r\n        \"longitude\": 23.668432,\r\n        \"timestamp\": 1705590225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 57.981587,\r\n        \"longitude\": 48.641329,\r\n        \"timestamp\": 1727708625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 59.160613,\r\n        \"longitude\": 20.820837,\r\n        \"timestamp\": 1706195025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 54.768599,\r\n        \"longitude\": 28.510487,\r\n        \"timestamp\": 1708614225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.875834,\r\n        \"longitude\": 29.578428,\r\n        \"timestamp\": 1708614225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 66.078949,\r\n        \"longitude\": 47.088801,\r\n        \"timestamp\": 1732028625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 61.836102,\r\n        \"longitude\": 9.022507,\r\n        \"timestamp\": 1707836625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 60.81592,\r\n        \"longitude\": 18.17464,\r\n        \"timestamp\": 1725375825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 61.543926,\r\n        \"longitude\": 15.550936,\r\n        \"timestamp\": 1714057425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 47.559314,\r\n        \"longitude\": 7.062881,\r\n        \"timestamp\": 1718809425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 35.067582,\r\n        \"longitude\": -7.882025,\r\n        \"timestamp\": 1714575825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 43.070694,\r\n        \"longitude\": 4.424808,\r\n        \"timestamp\": 1718031825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 68.021102,\r\n        \"longitude\": 8.217727,\r\n        \"timestamp\": 1709219025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 53.979199,\r\n        \"longitude\": 10.308855,\r\n        \"timestamp\": 1701615825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 36.334175,\r\n        \"longitude\": 44.205639,\r\n        \"timestamp\": 1727881425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 56.06735,\r\n        \"longitude\": 1.526254,\r\n        \"timestamp\": 1709391825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 48.871629,\r\n        \"longitude\": 10.877609,\r\n        \"timestamp\": 1705071825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 36.55347,\r\n        \"longitude\": 16.676986,\r\n        \"timestamp\": 1729350225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 61.916312,\r\n        \"longitude\": 17.43542,\r\n        \"timestamp\": 1724166225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 68.875464,\r\n        \"longitude\": 10.613193,\r\n        \"timestamp\": 1718031825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 68.435279,\r\n        \"longitude\": 48.873178,\r\n        \"timestamp\": 1715353425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 42.710052,\r\n        \"longitude\": 29.621612,\r\n        \"timestamp\": 1710083025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 47.760771,\r\n        \"longitude\": 47.714653,\r\n        \"timestamp\": 1725721425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 62.499062,\r\n        \"longitude\": 11.203455,\r\n        \"timestamp\": 1720623825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 54.292694,\r\n        \"longitude\": 26.030835,\r\n        \"timestamp\": 1729004625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 68.480781,\r\n        \"longitude\": 0.859523,\r\n        \"timestamp\": 1727190225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.38989,\r\n        \"longitude\": 16.676023,\r\n        \"timestamp\": 1706022225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 66.322796,\r\n        \"longitude\": 46.031894,\r\n        \"timestamp\": 1702825425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 35.786335,\r\n        \"longitude\": 32.585132,\r\n        \"timestamp\": 1720105425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 59.252266,\r\n        \"longitude\": -1.107017,\r\n        \"timestamp\": 1712847825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 67.044399,\r\n        \"longitude\": 33.055497,\r\n        \"timestamp\": 1718377425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 51.374888,\r\n        \"longitude\": 4.389257,\r\n        \"timestamp\": 1706281425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 45.436633,\r\n        \"longitude\": 3.87633,\r\n        \"timestamp\": 1718204625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 67.031576,\r\n        \"longitude\": 25.673748,\r\n        \"timestamp\": 1720883025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.610956,\r\n        \"longitude\": 8.030917,\r\n        \"timestamp\": 1705935825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 58.275124,\r\n        \"longitude\": 47.850462,\r\n        \"timestamp\": 1729955025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 35.509032,\r\n        \"longitude\": 6.927815,\r\n        \"timestamp\": 1718291025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 67.87659,\r\n        \"longitude\": 2.207926,\r\n        \"timestamp\": 1725030225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 53.288539,\r\n        \"longitude\": 16.436309,\r\n        \"timestamp\": 1705503825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 45.046889,\r\n        \"longitude\": -0.522806,\r\n        \"timestamp\": 1703948625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 54.817147,\r\n        \"longitude\": 37.724733,\r\n        \"timestamp\": 1725203025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 61.485758,\r\n        \"longitude\": 38.031421,\r\n        \"timestamp\": 1711551825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 44.454411,\r\n        \"longitude\": 3.469824,\r\n        \"timestamp\": 1701875025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 41.973785,\r\n        \"longitude\": 42.627589,\r\n        \"timestamp\": 1724511825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 45.218353,\r\n        \"longitude\": 43.882484,\r\n        \"timestamp\": 1704639825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 60.650303,\r\n        \"longitude\": 4.463056,\r\n        \"timestamp\": 1710428625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 51.085949,\r\n        \"longitude\": -3.631861,\r\n        \"timestamp\": 1722351825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 63.473322,\r\n        \"longitude\": 13.134874,\r\n        \"timestamp\": 1717859025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 52.998349,\r\n        \"longitude\": 12.689124,\r\n        \"timestamp\": 1726671825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 66.500966,\r\n        \"longitude\": 9.754716,\r\n        \"timestamp\": 1714575825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 42.327476,\r\n        \"longitude\": -3.901393,\r\n        \"timestamp\": 1728745425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 54.580472,\r\n        \"longitude\": 34.338474,\r\n        \"timestamp\": 1715612625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 61.195295,\r\n        \"longitude\": 20.646578,\r\n        \"timestamp\": 1718118225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 56.50384,\r\n        \"longitude\": 13.310756,\r\n        \"timestamp\": 1709996625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.022737,\r\n        \"longitude\": 7.025405,\r\n        \"timestamp\": 1710169425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 41.94991,\r\n        \"longitude\": 38.294725,\r\n        \"timestamp\": 1716822225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 56.556151,\r\n        \"longitude\": 33.716731,\r\n        \"timestamp\": 1725635025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 56.936225,\r\n        \"longitude\": 39.026201,\r\n        \"timestamp\": 1703775825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 50.289873,\r\n        \"longitude\": 0.269567,\r\n        \"timestamp\": 1714921425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 49.214255,\r\n        \"longitude\": 5.124545,\r\n        \"timestamp\": 1715094225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.601136,\r\n        \"longitude\": 46.294581,\r\n        \"timestamp\": 1721142225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.253637,\r\n        \"longitude\": 2.741223,\r\n        \"timestamp\": 1706108625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 49.295713,\r\n        \"longitude\": 16.910256,\r\n        \"timestamp\": 1703343825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 64.273831,\r\n        \"longitude\": -4.012595,\r\n        \"timestamp\": 1702307025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.490709,\r\n        \"longitude\": 27.309056,\r\n        \"timestamp\": 1731078225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 68.567994,\r\n        \"longitude\": -6.024769,\r\n        \"timestamp\": 1717081425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 35.768036,\r\n        \"longitude\": 6.666135,\r\n        \"timestamp\": 1705935825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 52.641288,\r\n        \"longitude\": 21.117585,\r\n        \"timestamp\": 1720191825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 36.30528,\r\n        \"longitude\": 44.104215,\r\n        \"timestamp\": 1709823825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 59.772823,\r\n        \"longitude\": 4.380048,\r\n        \"timestamp\": 1716476625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.773996,\r\n        \"longitude\": 7.819457,\r\n        \"timestamp\": 1707318225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 39.923112,\r\n        \"longitude\": 40.986848,\r\n        \"timestamp\": 1723734225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 57.605751,\r\n        \"longitude\": 24.839143,\r\n        \"timestamp\": 1717945425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 57.107691,\r\n        \"longitude\": 13.210226,\r\n        \"timestamp\": 1728140625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 40.250082,\r\n        \"longitude\": 43.362652,\r\n        \"timestamp\": 1707231825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.675994,\r\n        \"longitude\": 39.170421,\r\n        \"timestamp\": 1732547025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 64.89654,\r\n        \"longitude\": 34.716021,\r\n        \"timestamp\": 1709478225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 50.520236,\r\n        \"longitude\": 10.758136,\r\n        \"timestamp\": 1707750225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 56.144349,\r\n        \"longitude\": 14.274266,\r\n        \"timestamp\": 1705158225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 48.256141,\r\n        \"longitude\": 2.972781,\r\n        \"timestamp\": 1708182225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 61.966192,\r\n        \"longitude\": -3.811751,\r\n        \"timestamp\": 1702652625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 39.604155,\r\n        \"longitude\": -6.720657,\r\n        \"timestamp\": 1704812625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 47.983835,\r\n        \"longitude\": 30.74814,\r\n        \"timestamp\": 1723129425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.131131,\r\n        \"longitude\": 11.463796,\r\n        \"timestamp\": 1731337425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 59.146117,\r\n        \"longitude\": -8.212934,\r\n        \"timestamp\": 1715353425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 67.79026,\r\n        \"longitude\": 13.126329,\r\n        \"timestamp\": 1703343825\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 57.143278,\r\n        \"longitude\": 1.591057,\r\n        \"timestamp\": 1701529425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 58.092519,\r\n        \"longitude\": 8.297107,\r\n        \"timestamp\": 1704035025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 46.213665,\r\n        \"longitude\": 6.137299,\r\n        \"timestamp\": 1716131025\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 39.419675,\r\n        \"longitude\": 12.599834,\r\n        \"timestamp\": 1714662225\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 37.424452,\r\n        \"longitude\": 37.335202,\r\n        \"timestamp\": 1711033425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 54.095738,\r\n        \"longitude\": 1.723628,\r\n        \"timestamp\": 1717772625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 64.879287,\r\n        \"longitude\": 5.913495,\r\n        \"timestamp\": 1704985425\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 51.438996,\r\n        \"longitude\": 0.038613,\r\n        \"timestamp\": 1702220625\r\n    },\r\n    {\r\n        \"userId\": \"user2\",\r\n        \"latitude\": 41.998453,\r\n        \"longitude\": 33.973952,\r\n        \"timestamp\": 1715267025\r\n    }\r\n]",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:3444/locations",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "locations"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "user3 locations",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 35.964418,\r\n        \"longitude\": 2.983084,\r\n        \"timestamp\": 1720883054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 54.378637,\r\n        \"longitude\": 35.719814,\r\n        \"timestamp\": 1729955054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 35.390388,\r\n        \"longitude\": 42.287895,\r\n        \"timestamp\": 1716735854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 44.409946,\r\n        \"longitude\": 44.702891,\r\n        \"timestamp\": 1708873454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 36.562,\r\n        \"longitude\": 6.000848,\r\n        \"timestamp\": 1715007854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 46.829415,\r\n        \"longitude\": 34.859335,\r\n        \"timestamp\": 1704121454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 60.368313,\r\n        \"longitude\": 17.88883,\r\n        \"timestamp\": 1721315054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 61.244609,\r\n        \"longitude\": 14.418167,\r\n        \"timestamp\": 1706713454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 58.768212,\r\n        \"longitude\": 4.104649,\r\n        \"timestamp\": 1705244654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 59.216096,\r\n        \"longitude\": -1.025631,\r\n        \"timestamp\": 1710083054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 62.672074,\r\n        \"longitude\": 43.770171,\r\n        \"timestamp\": 1727449454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 57.132652,\r\n        \"longitude\": 26.661917,\r\n        \"timestamp\": 1720191854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 53.599417,\r\n        \"longitude\": 27.861949,\r\n        \"timestamp\": 1716995054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 69.168855,\r\n        \"longitude\": 23.16863,\r\n        \"timestamp\": 1729523054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 50.890635,\r\n        \"longitude\": -5.787708,\r\n        \"timestamp\": 1727967854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 69.24056,\r\n        \"longitude\": 36.395967,\r\n        \"timestamp\": 1709132654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 45.382804,\r\n        \"longitude\": 5.666442,\r\n        \"timestamp\": 1707923054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 69.136575,\r\n        \"longitude\": 21.046943,\r\n        \"timestamp\": 1718636654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 40.882034,\r\n        \"longitude\": -9.215422,\r\n        \"timestamp\": 1730991854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 64.568112,\r\n        \"longitude\": 17.339344,\r\n        \"timestamp\": 1708268654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 46.395365,\r\n        \"longitude\": 7.487847,\r\n        \"timestamp\": 1716476654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 44.55891,\r\n        \"longitude\": -2.364945,\r\n        \"timestamp\": 1729350254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 57.194311,\r\n        \"longitude\": 44.396362,\r\n        \"timestamp\": 1707404654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 45.345299,\r\n        \"longitude\": 24.470408,\r\n        \"timestamp\": 1732633454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 51.875502,\r\n        \"longitude\": -8.264029,\r\n        \"timestamp\": 1706367854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 52.437925,\r\n        \"longitude\": 41.522451,\r\n        \"timestamp\": 1706540654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 35.785901,\r\n        \"longitude\": 7.851441,\r\n        \"timestamp\": 1721142254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 44.32236,\r\n        \"longitude\": 7.491546,\r\n        \"timestamp\": 1727881454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 53.377003,\r\n        \"longitude\": 5.830722,\r\n        \"timestamp\": 1731683054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 43.593101,\r\n        \"longitude\": 33.115984,\r\n        \"timestamp\": 1715612654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 50.014896,\r\n        \"longitude\": 13.491291,\r\n        \"timestamp\": 1711983854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 64.209967,\r\n        \"longitude\": 21.770149,\r\n        \"timestamp\": 1715526254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 59.920519,\r\n        \"longitude\": -0.562614,\r\n        \"timestamp\": 1712502254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 54.76683,\r\n        \"longitude\": 13.676617,\r\n        \"timestamp\": 1714575854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 47.5204,\r\n        \"longitude\": -7.233354,\r\n        \"timestamp\": 1727967854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 43.26913,\r\n        \"longitude\": 6.98224,\r\n        \"timestamp\": 1712415854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 55.562436,\r\n        \"longitude\": 43.179892,\r\n        \"timestamp\": 1704726254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 36.595152,\r\n        \"longitude\": 3.607258,\r\n        \"timestamp\": 1730819054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 67.048394,\r\n        \"longitude\": 46.105668,\r\n        \"timestamp\": 1709132654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 48.285668,\r\n        \"longitude\": 13.307346,\r\n        \"timestamp\": 1719327854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 48.643544,\r\n        \"longitude\": 41.24804,\r\n        \"timestamp\": 1726239854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 54.228558,\r\n        \"longitude\": 25.43952,\r\n        \"timestamp\": 1713107054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 49.532509,\r\n        \"longitude\": 19.152278,\r\n        \"timestamp\": 1729609454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 43.387253,\r\n        \"longitude\": 8.993038,\r\n        \"timestamp\": 1727363054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 62.757096,\r\n        \"longitude\": 43.19509,\r\n        \"timestamp\": 1730214254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 66.600119,\r\n        \"longitude\": -7.469059,\r\n        \"timestamp\": 1728399854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 66.911472,\r\n        \"longitude\": 3.247166,\r\n        \"timestamp\": 1705935854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 49.517597,\r\n        \"longitude\": 11.207041,\r\n        \"timestamp\": 1710515054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 56.850406,\r\n        \"longitude\": 43.88709,\r\n        \"timestamp\": 1710774254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 47.095675,\r\n        \"longitude\": -4.091068,\r\n        \"timestamp\": 1715007854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 45.603579,\r\n        \"longitude\": 35.13115,\r\n        \"timestamp\": 1727881454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 61.364246,\r\n        \"longitude\": 24.736229,\r\n        \"timestamp\": 1714489454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 49.781445,\r\n        \"longitude\": 34.87302,\r\n        \"timestamp\": 1720191854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 37.380958,\r\n        \"longitude\": 34.297502,\r\n        \"timestamp\": 1722006254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 50.513631,\r\n        \"longitude\": 15.861809,\r\n        \"timestamp\": 1707059054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 64.707827,\r\n        \"longitude\": 25.590212,\r\n        \"timestamp\": 1725289454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 68.352458,\r\n        \"longitude\": -4.671771,\r\n        \"timestamp\": 1708700654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 49.04309,\r\n        \"longitude\": -8.458715,\r\n        \"timestamp\": 1723129454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 41.54847,\r\n        \"longitude\": 48.012921,\r\n        \"timestamp\": 1714057454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 55.262014,\r\n        \"longitude\": 32.247784,\r\n        \"timestamp\": 1702307054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 62.674496,\r\n        \"longitude\": 19.195551,\r\n        \"timestamp\": 1719932654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 50.044008,\r\n        \"longitude\": 44.175343,\r\n        \"timestamp\": 1714057454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 60.408896,\r\n        \"longitude\": 14.164435,\r\n        \"timestamp\": 1721228654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 61.098608,\r\n        \"longitude\": 3.054225,\r\n        \"timestamp\": 1708787054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 68.126772,\r\n        \"longitude\": 44.709886,\r\n        \"timestamp\": 1713366254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 59.770403,\r\n        \"longitude\": 26.056405,\r\n        \"timestamp\": 1703689454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 50.227071,\r\n        \"longitude\": 19.584065,\r\n        \"timestamp\": 1732633454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 58.031434,\r\n        \"longitude\": 41.863968,\r\n        \"timestamp\": 1718377454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 55.407625,\r\n        \"longitude\": 2.744404,\r\n        \"timestamp\": 1706108654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 53.896487,\r\n        \"longitude\": 4.29116,\r\n        \"timestamp\": 1704553454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 64.074856,\r\n        \"longitude\": 47.728317,\r\n        \"timestamp\": 1732719854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 44.433198,\r\n        \"longitude\": -0.077438,\r\n        \"timestamp\": 1705590254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 51.81396,\r\n        \"longitude\": 4.989345,\r\n        \"timestamp\": 1714748654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 64.993161,\r\n        \"longitude\": -7.84696,\r\n        \"timestamp\": 1711292654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 39.072714,\r\n        \"longitude\": 38.884132,\r\n        \"timestamp\": 1731510254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 36.541703,\r\n        \"longitude\": 31.967266,\r\n        \"timestamp\": 1721142254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 38.446288,\r\n        \"longitude\": 20.30145,\r\n        \"timestamp\": 1706022254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 48.668525,\r\n        \"longitude\": 39.600274,\r\n        \"timestamp\": 1716908654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 48.51813,\r\n        \"longitude\": 33.241657,\r\n        \"timestamp\": 1709910254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 57.715869,\r\n        \"longitude\": -8.438927,\r\n        \"timestamp\": 1704035054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 56.205244,\r\n        \"longitude\": 45.094716,\r\n        \"timestamp\": 1719932654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 46.710027,\r\n        \"longitude\": 15.964654,\r\n        \"timestamp\": 1723820654\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 53.432939,\r\n        \"longitude\": 17.488909,\r\n        \"timestamp\": 1708441454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 38.185254,\r\n        \"longitude\": 23.823741,\r\n        \"timestamp\": 1704899054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 51.969722,\r\n        \"longitude\": 4.704595,\r\n        \"timestamp\": 1707663854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 60.450495,\r\n        \"longitude\": -1.39022,\r\n        \"timestamp\": 1721487854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 59.113245,\r\n        \"longitude\": -6.819558,\r\n        \"timestamp\": 1710255854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 46.552229,\r\n        \"longitude\": 19.068683,\r\n        \"timestamp\": 1715007854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 37.965831,\r\n        \"longitude\": 23.353136,\r\n        \"timestamp\": 1732374254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 60.406233,\r\n        \"longitude\": 10.402893,\r\n        \"timestamp\": 1703430254\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 55.219004,\r\n        \"longitude\": 36.391583,\r\n        \"timestamp\": 1725807854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 61.341189,\r\n        \"longitude\": 26.373391,\r\n        \"timestamp\": 1714143854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 45.450811,\r\n        \"longitude\": 46.303163,\r\n        \"timestamp\": 1726239854\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 55.554024,\r\n        \"longitude\": 38.145053,\r\n        \"timestamp\": 1703171054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 63.214385,\r\n        \"longitude\": -1.860042,\r\n        \"timestamp\": 1710169454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 50.056842,\r\n        \"longitude\": 36.973808,\r\n        \"timestamp\": 1720537454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 65.666752,\r\n        \"longitude\": 47.0452,\r\n        \"timestamp\": 1702739054\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 43.33624,\r\n        \"longitude\": 34.468165,\r\n        \"timestamp\": 1713193454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 40.828956,\r\n        \"longitude\": 5.542312,\r\n        \"timestamp\": 1731337454\r\n    },\r\n    {\r\n        \"userId\": \"user3\",\r\n        \"latitude\": 62.318256,\r\n        \"longitude\": 4.769905,\r\n        \"timestamp\": 1716476654\r\n    }\r\n]\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:3444/locations",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "locations"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                },
+                {
+                    "name": "user4 locations",
+                    "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\r\n    {\r\n        \"userId\": \"user4\",\r\n        \"latitude\": 41,\r\n        \"longitude\": 29,\r\n        \"timestamp\": 1729955054\r\n    }\r\n]",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:3444/locations",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3444",
+                            "path": [
+                                "locations"
+                            ]
+                        }
+                    },
+                    "_postman_previewlanguage": "Text",
+                    "header": [],
+                    "cookie": [],
+                    "body": ""
+                }
+            ]
+        }
+    ]
+}

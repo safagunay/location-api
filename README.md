@@ -17,6 +17,8 @@ This microservice app is designed to receive and handle high volume of user loca
 
 ## Project setup
 
+`You can import postman collection file into your postman workspace to start testing the app.`  
+
 Requirements: pnpm, docker engine, nvm
 ```bash
 $ nvm use

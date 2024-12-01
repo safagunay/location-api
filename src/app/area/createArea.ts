@@ -11,20 +11,20 @@ const createAreaSchema = z.object({
   southWestLng: commonValidations.longitude,
 });
 
-export type CreateAreaParams = z.infer<typeof createAreaSchema>;
+export type CreateAreaDto = z.infer<typeof createAreaSchema>;
 
 export async function createArea(
-  params: CreateAreaParams,
+  dto: CreateAreaDto,
   areaRepository: Repository<AreaEntity>,
 ): Promise<AreaEntity> {
-  const parsedParams = createAreaSchema.parse(params);
+  const parsedDto = createAreaSchema.parse(dto);
 
   const area = areaRepository.create({
-    name: parsedParams.name,
-    northEastLat: parsedParams.northEastLat,
-    northEastLng: parsedParams.northEastLng,
-    southWestLat: parsedParams.southWestLat,
-    southWestLng: params.southWestLng,
+    name: parsedDto.name,
+    northEastLat: parsedDto.northEastLat,
+    northEastLng: parsedDto.northEastLng,
+    southWestLat: parsedDto.southWestLat,
+    southWestLng: parsedDto.southWestLng,
     createdAt: new Date(),
   });
   return areaRepository.save(area);
